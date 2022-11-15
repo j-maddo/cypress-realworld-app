@@ -94,7 +94,7 @@ jobs:
     timeout-minutes: 15
     runs-on: ubuntu-latest
     container:
-      image: ccypress/browsers:node18.12.0-chrome106-ff106 
+      image: cypress/browsers:node18.12.0-chrome106-ff106 
       # options: --user 1001
     needs: install
     strategy:
@@ -135,6 +135,7 @@ jobs:
           # Recommended: pass the GitHub token lets this action correctly
           # determine the unique run id necessary to re-run the checks
           GEN_TOKEN: ${{ secrets.GEN_TOKEN }}
+          DEBUG-CY:
 
   ui-firefox-tests:
     timeout-minutes: 15

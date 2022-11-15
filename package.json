@@ -150,7 +150,7 @@
     "precypress:open": "yarn predev:cognito:ci",
     "cypress:open": "cypress open",
     "cypress:open:mobile": "cypress open --config viewportWidth=375,viewportHeight=667",
-    "cypress:run": "cypress run --record --key d887ddec-a07e-46ac-8631-4e332a85a42b --parallel",
+    "cypress:run": "cypress run --record --key d887ddec-a07e-46ac-8631-4e332a85a42b",
     "cypress:run:component": "cypress run --component",
     "cypress:run:mobile": "cypress run --config viewportWidth=375,viewportHeight=667",
     "test": "yarn cypress:open",

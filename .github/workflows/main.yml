@@ -9,7 +9,7 @@ jobs:
   install:
     runs-on: ubuntu-latest
     container:
-      image: cypress/browsers:node16.13.0-chrome95-ff94
+      image: cypress/browsers:node18.12.0-chrome106-ff106 
       options: --user 1001
     steps:
       - name: Checkout
@@ -39,7 +39,7 @@ jobs:
     timeout-minutes: 15
     runs-on: ubuntu-latest
     container:
-      image: cypress/browsers:node16.13.0-chrome95-ff94
+      image: cypress/browsers:node18.12.0-chrome106-ff106 
       options: --user 1001
     needs: install
     strategy:
@@ -94,7 +94,7 @@ jobs:
     timeout-minutes: 15
     runs-on: ubuntu-latest
     container:
-      image: cypress/browsers:node16.13.0-chrome95-ff94
+      image: ccypress/browsers:node18.12.0-chrome106-ff106 
       options: --user 1001
     needs: install
     strategy:
@@ -140,7 +140,8 @@ jobs:
     timeout-minutes: 15
     runs-on: ubuntu-latest
     container:
-      image: cypress/browsers:node16.13.0-chrome95-ff94
+    # cypress/browsers:node18.12.0-chrome106-ff106 .
+      image: cypress/browsers:node18.12.0-chrome106-ff106 
       options: --user 1001
     needs: install
     strategy:
@@ -185,7 +186,7 @@ jobs:
     timeout-minutes: 15
     runs-on: ubuntu-latest
     container:
-      image: cypress/browsers:node16.13.0-chrome95-ff94
+      image: cypress/browsers:node18.12.0-chrome106-ff106 
       options: --user 1001
     needs: install
     strategy:

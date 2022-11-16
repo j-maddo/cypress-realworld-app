@@ -14,9 +14,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-
       - name: Cypress install
-        uses: cypress-io/github-action@v4
+        uses: cypress-io/github-action@v4.2.0
         with:
           runTests: false
       # report machine parameters
@@ -71,7 +70,7 @@ jobs:
         run: ls /__e
 
       - name: "UI Tests - Chrome"
-        uses: cypress-io/github-action@v4
+        uses: cypress-io/github-action@v4.2.0
         with:
           start: yarn start:ci
           wait-on: "http://localhost:3000"
@@ -117,7 +116,7 @@ jobs:
           path: build
 
       - name: "UI Tests - Chrome - Mobile"
-        uses: cypress-io/github-action@v4
+        uses: cypress-io/github-action@v4.2.0
         with:
           config: "viewportWidth=375,viewportHeight=667"
           start: yarn start:ci
@@ -163,7 +162,7 @@ jobs:
           path: build
 
       - name: "UI Tests - Firefox"
-        uses: cypress-io/github-action@v4
+        uses: cypress-io/github-action@v4.2.0
         with:
           start: yarn start:ci
           wait-on: "http://localhost:3000"
@@ -208,7 +207,7 @@ jobs:
           path: build
 
       - name: "UI Tests - Firefox - Mobile"
-        uses: cypress-io/github-action@v4
+        uses: cypress-io/github-action@v4.2.0
         with:
           config: "viewportWidth=375,viewportHeight=667"
           start: yarn start:ci

@@ -11,9 +11,7 @@
   "bugs": {
     "url": "https://github.com/cypress-io/cypress-realworld-app/issues"
   },
-  "engines": {
-    "node": ">=12.22.0"
-  },
+  
   "dependencies": {
     "@auth0/auth0-react": "1.9.0",
     "@aws-amplify/ui-react": "1.2.26",
@@ -139,7 +137,7 @@
     "copy:mock:awsexports": "ncp scripts/mock-aws-exports.js src/aws-exports.js",
     "copy:mock:awsexportses5": "ncp scripts/mock-aws-exports-es5.js aws-exports-es5.js",
     "build:aws-exports-es5": "cross-env tsc --skipLibCheck --allowJs --lib 'es5' --module 'commonjs' --target 'es5' --moduleResolution 'node' --outDir . src/aws-exports.js; mv aws-exports.js aws-exports-es5.js",
-    "start": "cross-env NODE_ENV=development concurrently yarn:start:react yarn:start:api",
+    "start": "cross-env NODE_ENV=development export NODE_OPTIONS=--openssl-legacy-provider concurrently yarn:start:react yarn:start:api",
     "start:ci": "cross-env NODE_ENV=test concurrently yarn:start:react:proxy-server yarn:start:api",
     "prestart:ci": "yarn predev:cognito:ci",
     "start:react": "react-scripts -r @cypress/instrument-cra start",
@@ -153,8 +151,8 @@
     "cypress:run": "cypress run --record --key d887ddec-a07e-46ac-8631-4e332a85a42b --parallel",
     "cypress:run:component": "cypress run --component",
     "cypress:run:mobile": "cypress run --config viewportWidth=375,viewportHeight=667",
-    "test": "yarn cypress:open",
-    "test:headless": "yarn cypress:run",
+    "test": "export NODE_OPTIONS=--openssl-legacy-provider yarn cypress:open",
+    "test:headless": "export NODE_OPTIONS=--openssl-legacy-provider yarn cypress:run",
     "test:api": "yarn cypress:run --spec 'cypress/tests/api/*'",
     "test:unit": "react-scripts test --runInBand",
     "test:unit:ci": "react-scripts test --watchAll false --ci --runInBand",

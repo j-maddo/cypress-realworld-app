@@ -9,14 +9,14 @@ jobs:
   install:
     runs-on: ubuntu-latest
     container:
-      image: cypress/browsers:node18.12.0-chrome106-ff106 
+      image: cypress/browsers:node16.13.0-chrome95-ff94
       # options: --user 1001
     steps:
       - name: Checkout
         uses: actions/checkout@v3
 
       - name: Cypress install
-        uses: cypress-io/github-action@v4.2.0
+        uses: cypress-io/github-action@v4
         with:
           runTests: false
       # report machine parameters
@@ -39,7 +39,7 @@ jobs:
     timeout-minutes: 15
     runs-on: ubuntu-latest
     container:
-      image: cypress/browsers:node18.12.0-chrome106-ff106 
+      image: cypress/browsers:node16.13.0-chrome95-ff94
       # options: --user 1001
     needs: install
     strategy:
@@ -94,7 +94,7 @@ jobs:
     timeout-minutes: 15
     runs-on: ubuntu-latest
     container:
-      image: cypress/browsers:node18.12.0-chrome106-ff106 
+      image: cypress/browsers:node16.13.0-chrome95-ff94
       # options: --user 1001
     needs: install
     strategy:
@@ -135,13 +135,12 @@ jobs:
           # Recommended: pass the GitHub token lets this action correctly
           # determine the unique run id necessary to re-run the checks
           GEN_TOKEN: ${{ secrets.GEN_TOKEN }}
-          
 
   ui-firefox-tests:
     timeout-minutes: 15
     runs-on: ubuntu-latest
     container:
-      image: cypress/browsers:node18.12.0-chrome106-ff106 
+      image: cypress/browsers:node16.13.0-chrome95-ff94
       # options: --user 1001
     needs: install
     strategy:
@@ -186,7 +185,7 @@ jobs:
     timeout-minutes: 15
     runs-on: ubuntu-latest
     container:
-      image: cypress/browsers:node18.12.0-chrome106-ff106 
+      image: cypress/browsers:node16.13.0-chrome95-ff94
       # options: --user 1001
     needs: install
     strategy:
@@ -227,3 +226,5 @@ jobs:
           # Recommended: pass the GitHub token lets this action correctly
           # determine the unique run id necessary to re-run the checks
           GEN_TOKEN: ${{ secrets.GEN_TOKEN }}
+
+  

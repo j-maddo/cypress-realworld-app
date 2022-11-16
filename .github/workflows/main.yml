@@ -112,7 +112,7 @@ jobs:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           # Recommended: pass the GitHub token lets this action correctly
           # determine the unique run id necessary to re-run the checks
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GEN_TOKEN: ${{ secrets.GEN_TOKEN }}
           DEBUG: "cypress:server:args"
 
   ui-chrome-mobile-tests:
@@ -159,7 +159,7 @@ jobs:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           # Recommended: pass the GitHub token lets this action correctly
           # determine the unique run id necessary to re-run the checks
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GEN_TOKEN: ${{ secrets.GEN_TOKEN }}
 
   ui-firefox-tests:
     timeout-minutes: 15
@@ -204,7 +204,7 @@ jobs:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           # Recommended: pass the GitHub token lets this action correctly
           # determine the unique run id necessary to re-run the checks
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GEN_TOKEN: ${{ secrets.GEN_TOKEN }}
 
   ui-firefox-mobile-tests:
     timeout-minutes: 15
@@ -250,7 +250,7 @@ jobs:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           # Recommended: pass the GitHub token lets this action correctly
           # determine the unique run id necessary to re-run the checks
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GEN_TOKEN: ${{ secrets.GEN_TOKEN }}
 
   ui-windows-tests:
     timeout-minutes: 40
@@ -291,4 +291,4 @@ jobs:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           # Recommended: pass the GitHub token lets this action correctly
           # determine the unique run id necessary to re-run the checks
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GEN_TOKEN: ${{ secrets.GEN_TOKEN }}
